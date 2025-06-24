@@ -1,0 +1,292 @@
+{
+	"id": "cad6bbfc-2bb8-4a51-9dd5-2c1d0f841d96",
+	"name": "KeepTrack API",
+	"timestamp": "2025-06-24T13:10:28.676Z",
+	"collection_id": "46150599-e5bb2e5d-7e18-4ebf-9cb3-2b7c6d311f12",
+	"folder_id": 0,
+	"environment_id": "46150599-e5013a6c-99d0-4644-9a40-d967a8425048",
+	"totalPass": 8,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-06-24T13:10:27.601Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "aad50c19-c480-4695-bae3-60cb7a3e964e",
+			"name": "User Register",
+			"url": "http://localhost:8080/api/auth/register",
+			"time": 59,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Registration successful": true
+			},
+			"testPassFailCounts": {
+				"Registration successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				59
+			],
+			"allTests": [
+				{
+					"Registration successful": true
+				}
+			]
+		},
+		{
+			"id": "2cdc4669-798a-4603-a7c9-6a59ef34b677",
+			"name": "User Login",
+			"url": "http://localhost:8080/api/users/login",
+			"time": 55,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Login successful": true
+			},
+			"testPassFailCounts": {
+				"Login successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				55
+			],
+			"allTests": [
+				{
+					"Login successful": true
+				}
+			]
+		},
+		{
+			"id": "8e32ca2a-aaf0-45de-9062-af359931c4e8",
+			"name": "Project Create",
+			"url": "http://localhost:8080/api/projects",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Create project successful": true
+			},
+			"testPassFailCounts": {
+				"Create project successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Create project successful": true
+				}
+			]
+		},
+		{
+			"id": "ed3d423f-db60-483e-8912-1d425c1be8b8",
+			"name": "Project Get All",
+			"url": "http://localhost:8080/api/projects",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Get all projects successful": true
+			},
+			"testPassFailCounts": {
+				"Get all projects successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Get all projects successful": true
+				}
+			]
+		},
+		{
+			"id": "2ac2c0be-467e-4ef3-b062-c167fe47d6b8",
+			"name": "Project add Task",
+			"url": "http://localhost:8080/api/projects/{projectId}/tasks/{taskId}",
+			"time": 4,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a8b3f2bb-8662-4ed6-9713-b7cee94638b5",
+			"name": "Task Create",
+			"url": "http://localhost:8080/api/tasks",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Create task successful": true
+			},
+			"testPassFailCounts": {
+				"Create task successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Create task successful": true
+				}
+			]
+		},
+		{
+			"id": "99ca7c50-5553-4377-b0a7-67f842be89e6",
+			"name": "Task Get All",
+			"url": "http://localhost:8080/api/tasks",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Get all tasks successful": true
+			},
+			"testPassFailCounts": {
+				"Get all tasks successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Get all tasks successful": true
+				}
+			]
+		},
+		{
+			"id": "f8940da8-c59e-44ac-a447-63c2aaa96ed1",
+			"name": "Tag Create",
+			"url": "http://localhost:8080/api/tags",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Create tag successful": true
+			},
+			"testPassFailCounts": {
+				"Create tag successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Create tag successful": true
+				}
+			]
+		},
+		{
+			"id": "0ded716e-98a5-48a7-bf8c-f74301cc28b4",
+			"name": "Tag Get All",
+			"url": "http://localhost:8080/api/tags",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Get all tags successful": true
+			},
+			"testPassFailCounts": {
+				"Get all tags successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Get all tags successful": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 169,
+	"collection": {
+		"requests": [
+			{
+				"id": "aad50c19-c480-4695-bae3-60cb7a3e964e",
+				"method": "POST"
+			},
+			{
+				"id": "2cdc4669-798a-4603-a7c9-6a59ef34b677",
+				"method": "POST"
+			},
+			{
+				"id": "8e32ca2a-aaf0-45de-9062-af359931c4e8",
+				"method": "POST"
+			},
+			{
+				"id": "ed3d423f-db60-483e-8912-1d425c1be8b8",
+				"method": "GET"
+			},
+			{
+				"id": "2ac2c0be-467e-4ef3-b062-c167fe47d6b8",
+				"method": "POST"
+			},
+			{
+				"id": "a8b3f2bb-8662-4ed6-9713-b7cee94638b5",
+				"method": "POST"
+			},
+			{
+				"id": "99ca7c50-5553-4377-b0a7-67f842be89e6",
+				"method": "GET"
+			},
+			{
+				"id": "f8940da8-c59e-44ac-a447-63c2aaa96ed1",
+				"method": "POST"
+			},
+			{
+				"id": "0ded716e-98a5-48a7-bf8c-f74301cc28b4",
+				"method": "GET"
+			}
+		]
+	}
+}

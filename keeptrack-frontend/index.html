@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeepTrack</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="header-section">
+                <h1>Welcome to KeepTrack</h1>
+                <p class="subtitle">Your project management solution</p>
+            </div>
+            
+            <div id="auth-section" class="section-container">
+                <div class="button-group">
+                    <button onclick="window.location.href='login.html'" class="primary-btn">Login</button>
+                    <button onclick="window.location.href='register.html'" class="primary-btn register">Register</button>
+                </div>
+            </div>
+
+            <div id="dashboard-section" class="section-container" style="display:none;">
+                <h2>Dashboard</h2>
+                <div id="welcome-message" class="message-box"></div>
+                <div class="button-group vertical">
+                    <button id="boss-btn" onclick="window.location.href='boss.html'" class="dashboard-btn" style="display:none;">Boss Dashboard</button>
+                    <button id="manager-btn" onclick="window.location.href='manager.html'" class="dashboard-btn" style="display:none;">Manager Dashboard</button>
+                    <button id="user-btn" onclick="window.location.href='user.html'" class="dashboard-btn" style="display:none;">User Dashboard</button>
+                </div>
+                <button id="logout-btn" onclick="logout()" class="secondary-btn">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        window.onload = function() {
+            if (isLoggedIn()) {
+                const role = getUserRole();
+                document.getElementById('auth-section').style.display = 'none';
+                document.getElementById('dashboard-section').style.display = 'block';
+                document.getElementById('welcome-message').innerText = `Welcome, ${role}!`;
+
+                if (role === 'BOSS') document.getElementById('boss-btn').style.display = 'block';
+                else if (role === 'MANAGER') document.getElementById('manager-btn').style.display = 'block';
+                else if (role === 'USER') document.getElementById('user-btn').style.display = 'block';
+            }
+        };
+    </script>
+</body>
+</html>

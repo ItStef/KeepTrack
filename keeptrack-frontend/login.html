@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - KeepTrack</title>
+    <link rel="stylesheet" href="css/login-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="header-section">
+                <h1>Login to KeepTrack</h1>
+            </div>
+            
+            <div class="form-container">
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <button type="submit" class="primary-btn">Login</button>
+                    <p class="form-footer">
+                        Don't have an account? <a href="register.html">Register here</a>
+                    </p>
+                    <p id="loginMessage" class="message"></p>
+                </form>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="back-link">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

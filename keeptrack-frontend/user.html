@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/user-style.css">
+</head>
+<body>
+    <div id="unauth-msg" style="display: none;">
+        <h2>Unauthorized Access</h2>
+        <p>You must be logged in as a USER to view this content.</p>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="window.location.href='index.html'" class="home-btn">Home</button>
+        <button id="logout-button" class="logout-btn">Logout</button>
+    </div>
+
+    <div id="user-content" class="container">
+        <div class="forms-section">
+            <div class="form-container">
+                <h3>Create Tag</h3>
+                <form id="create-tag-form">
+                    <input type="text" id="tag-name" placeholder="Tag Name" required>
+                    <button type="submit">Create Tag</button>
+                </form>
+            </div>
+
+            <div class="form-container">
+                <h3>Add Tags to Task</h3>
+                <form id="add-tags-form">
+                    <select id="task-select" required>
+                        <option value="">Select Task</option>
+                    </select>
+                    <label for="task-tags">Select Tags (Hold Ctrl/Cmd to select multiple):</label>
+                    <select id="task-tags" multiple>
+                    </select>
+                    <button type="submit">Update Task Tags</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="display-section">
+            <div class="display-group">
+                <h3>Projects and Their Tasks</h3>
+                <div id="projects-tasks-list" class="relationship-list"></div>
+            </div>
+
+            <div class="display-group">
+                <h3>Tasks and Their Tags</h3>
+                <div id="tasks-tags-list" class="relationship-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="logout-section">
+        <button id="logout-button" onclick="logout()">Logout</button>
+    </div>
+    <script src="js/user.js"></script>
+</body>
+</html>

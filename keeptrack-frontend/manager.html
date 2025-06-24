@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard</title>
+    <link rel="stylesheet" href="css/manager-style.css">
+</head>
+<body>
+    <div id="unauth-msg" style="display: none;">
+        <h2>Unauthorized Access</h2>
+        <p>You must be logged in as a MANAGER to view this content.</p>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="window.location.href='index.html'" class="home-btn">Home</button>
+        <button id="logout-button" class="logout-btn">Logout</button>
+    </div>
+
+    <div id="manager-content" class="container">
+        <div class="forms-section">
+            <div class="form-container">
+                <form id="create-task-form">
+                    <h3>Create New Task</h3>
+                    <div class="form-group">
+                        <label for="task-name">Task Name</label>
+                        <input type="text" id="task-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-description">Description</label>
+                        <textarea id="task-description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-select">Project</label>
+                        <select id="project-select" required>
+                            <option value="">Select Project</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-tags">Tags (Hold Ctrl/Cmd to select multiple)</label>
+                        <select id="task-tags" multiple></select>
+                    </div>
+                    <button type="submit">Create Task</button>
+                </form>
+            </div>
+
+            <div class="form-container">
+                <form id="create-tag-form">
+                    <h3>Create New Tag</h3>
+                    <div class="form-group">
+                        <label for="tag-name">Tag Name</label>
+                        <input type="text" id="tag-name" required>
+                    </div>
+                    <button type="submit">Create Tag</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="display-section">
+            <div class="display-group">
+                <h3>Projects and Their Tasks</h3>
+                <div id="projects-tasks-list" class="relationship-list"></div>
+            </div>
+
+            <div class="display-group">
+                <h3>Tasks and Their Tags</h3>
+                <div id="tasks-tags-list" class="relationship-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/manager.js"></script>
+</body>
+</html>
